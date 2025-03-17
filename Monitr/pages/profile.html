@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitr</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <script src="../logic/actions.js"></script>
+</head>
+
+<body>
+
+
+    <div class="main-container">
+        <div class="sidebar-container" id="sidebar-container">
+        </div>
+
+        <div class="content-Responsive">
+            <div class="content-container">
+                <div>
+                    <section class="settings-section" id="profile">
+                        <h2>Profile Settings</h2>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Name</h3>
+                                <p>Enter your full name</p>
+                            </div>
+                            <input type="text" class="setting-control" placeholder="Enter your full name">
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Goal</h3>
+                                <p>Set your financial goal</p>
+                            </div>
+                            <select class="setting-control">
+                                <option>Track daily expenses</option>
+                                <option>Pay off debt</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Tracking Frequency</h3>
+                                <p>How often you want to track expenses</p>
+                            </div>
+                            <select class="setting-control">
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+            <div class="profileContainer">
+                <div class="profileCard">
+                    <img src="../assets/images/defaultProfile.png" alt="Profile Picture" class="profilePic"><br>
+                    <h3 class="profileName">@USERNAME</h3><br>
+                    <button action="submit" class="SignOut_Btn" id="SignOut_Btn">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../logic/actions.js"></script>
+    <script>
+        document.getElementById("SignOut_Btn").addEventListener("click", function (event) {
+            event.preventDefault();
+
+            console.log("User signed out");
+            window.location.href = "../index.html";
+        });
+    </script>
+</body>
+
+</html>

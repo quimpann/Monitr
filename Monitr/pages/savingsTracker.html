@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <title>Monitr</title>
+
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/savingsTracker.css">
+
+
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sidebar-container" id="sidebar-container"></div>
+
+        <div class="content-Responsive">
+            <div class="content-container">
+                <div class="content-1">
+                    <section class="Content1_Chart">
+                        <div class="chartContainer">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                    </section>
+                    <br>
+                    <section class="Content1_Table">
+                        <table id="savingsTable">
+                            <tr class="heading">
+                                <th>Month</th>
+                                <th>Income</th>
+                                <th>Expenses</th>
+                                <th>Savings</th>
+                            </tr>
+                            <tr>
+                                <td>January</td>
+
+                            </tr>
+                            <tr>
+                                <td>February</td>
+
+                            </tr>
+                            <tr>
+                                <td>March</td>
+
+                            </tr>
+                            <tr>
+                                <td>April</td>
+
+                            </tr>
+                            <tr>
+                                <td>May</td>
+
+                            </tr>
+                            <tr>
+                                <td>June</td>
+
+                            </tr>
+                            <tr>
+                                <td>July</td>
+
+                            </tr>
+                            <tr>
+                                <td>August</td>
+
+                            </tr>
+                            <tr>
+                                <td>September</td>
+
+                            </tr>
+                            <tr>
+                                <td>October</td>
+
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+                <div class="content-2">
+                    <section class="Content2_Wishlist">
+                        <h4> Wishlist </h4>
+                        <button class="wishlistButton" onclick="openWishlist()"> + </button>
+
+                        <div id="wishlistForm" class="wishlistContainer">
+                            <div class="wishlistFormContent">
+                                <h2>Wishlist</h2><br>
+                                <div class="wishlist-maker">
+                                    <input type="file" id="wishlistImage" accept="image/*"
+                                        onchange="previewImage(event)">
+
+                                    <!-- Image Preview -->
+                                    <div class="image-preview">
+                                        <img id="wishlistImagePreview" src="" alt="Image Preview"
+                                            style="display: none; max-width: 100%; height: auto;">
+                                    </div>
+
+                                    <input type="text" id="wishlistName" placeholder="Enter wishlist item">
+                                    <input type="number" id="wishlistPrice" placeholder="Enter price">
+                                    <input type="text" id="wishlistLink" placeholder="Enter link of item (Optional)">
+                                </div>
+
+                                <button class="saveWishlist" onclick="saveWishlist()">Save</button>
+                                <button class="backWishlist" onclick="closeWishlist()">Close</button>
+                            </div>
+                        </div>
+
+
+                    </section>
+                    <section class="Content2_SavingTracker">
+                        <h2> Add Saving </h2><br>
+                        <button class="AddSaving" onclick="openForm()"> + </button>
+
+                        <div id="popupForm" class="form-container">
+                            <div class="form-content">
+                                <h2>Add Saving</h2>
+                                <br>
+
+                                <!-- Form starts here -->
+                                <form action="../backend/savings.php" method="POST">
+                                    <div class="formContainer">
+                                        <div class="formMaker">
+                                            <input type="text" name="goalName" placeholder="Enter name" required>
+
+                                            <input type="number" name="savingAmount"
+                                                placeholder="Enter current savings amount (Optional)" required>
+
+                                            <input type="number" name="savingTarget"
+                                                placeholder="Enter savings target amount (Optional)"><br>
+
+                                            <input type="date" name="Deadline"
+                                                placeholder="Set deadline (Optional)"><br>
+
+                                            <input type="text" name="category" placeholder="Category (Optional)"><br>
+
+                                            <label for="Priority">Priority:</label>
+                                            <select name="Priority">
+                                                <option value="Low">Low</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="High">High</option>
+                                            </select><br><br>
+                                        </div>
+                                    </div>
+
+                                    <!-- Buttons inside form -->
+                                    <button type="button" onclick="closeForm()">Close</button>
+                                    <button type="submit">Save</button>
+
+                                </form>
+                                <!-- Form ends here -->
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../logic/actions.js" defer></script>
+</body>
+
+
+</html>

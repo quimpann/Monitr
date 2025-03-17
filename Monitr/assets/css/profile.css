@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1400px;
+  display: flex;
+}
+
+.sidebar-container {
+  flex: 1;
+  width: 10%;
+  height: 100%;
+}
+
+.content-Responsive {
+  display: flex;
+  flex-direction: row;
+}
+.content-container {
+  flex: 6;
+  max-width: 90%;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+body {
+  height: 100%;
+  /* 
+  overflow: hidden;
+  */
+  background-color: #f5f6fa;
+  color: #2d3436;
+  font-family: Arial, sans-serif;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-item {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f6fa;
+  overflow-y: auto;
+}
+
+.settings-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #2d3436;
+  border-bottom: 2px solid #5bb367;
+  padding-bottom: 0.5rem;
+}
+
+.setting-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-info {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.setting-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+}
+
+.setting-info p {
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.setting-control {
+  min-width: 200px;
+  padding: 0.75rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.setting-control:focus {
+  border-color: #5bb367;
+  outline: none;
+  box-shadow: 0 0 2px rgba(91, 179, 103, 0.2);
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #5bb367;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+.settings-section {
+  display: none;
+}
+
+.settings-section:target {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.settings-section:first-of-type {
+  display: block;
+}
+
+.SignOut_Btn {
+  background: #7ed957;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  color: white;
+  border: none;
+  padding: 10px 90px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+.SignOut_Btn:hover {
+  background: #ba4040;
+}
+
+
+.profileContainer {
+  display: flex;
+  margin: 8rem 6rem 14rem 6rem;
+}
+
+.profileCard {
+    margin: 0 ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileName {
+    text-align: center;
+}
+
+/* * tablet */
+@media (max-width: 1024px) {
+  .content-container {
+    flex: 1;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .profileContainer {
+    flex: 1;
+  }
+
+  .sidebar-container {
+    height: auto;
+    width: auto;
+    flex: 0;
+  }
+
+}
+
+/* * cp */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+}
+
+.content-Responsive {
+  width: 100%;
+  flex-direction: column-reverse;
+  margin: 0 auto;
+}
+
+.content-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+}
+
+  .sidebar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: unset;
+  }
+
+  .settings-nav {
+    flex-direction: row;
+  }
+
+  .profileContainer {
+    display: flex;
+    margin: 0rem 2rem 4rem 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileCard img {
+    height: 14rem;
+    width: auto;
+  }
+
+  .SignOut_Btn {
+    padding: 10px 70px;
+  }
+  
+
+}

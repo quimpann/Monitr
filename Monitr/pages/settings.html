@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitr</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href=".../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href=".../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href=".../assets/images/favicon-16x16.png">
+    <link rel="manifest" href=".../assets/images/site.webmanifest">
+
+    <link rel="stylesheet" href=".../assets/css/navbar.css">
+    <link rel="stylesheet" href=".../assets/css/global.css">
+
+
+    <script src=".../logic/actions.js"></script>
+</head>
+
+<body>
+
+
+    <div class="main-container">
+        <div class="sidebar-container" id="sidebar-container">
+           
+            
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-container">
+            <section class="settings-section" id="general">
+                <h2>General Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Currency</h3>
+                        <p>Select your preferred currency</p>
+                    </div>
+                    <select class="setting-control">
+                        <option>PHP (₱)</option>
+                        <option>USD ($)</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Start of Month</h3>
+                        <p>Set your budget cycle start date</p>
+                    </div>
+                    <select class="setting-control">
+                        <option>1st of month</option>
+                        <option>15th of month</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="settings-section" id="profile">
+                <h2>Profile Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Name</h3>
+                        <p>Enter your full name</p>
+                    </div>
+                    <input type="text" class="setting-control" placeholder="Enter your full name">
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Goal</h3>
+                        <p>Set your financial goal</p>
+                    </div>
+                    <select class="setting-control">
+                        <option>Track daily expenses</option>
+                        <option>Pay off debt</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="settings-section" id="security">
+                <h2>Security Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Expense Confirmation</h3>
+                        <p>Require confirmation for expenses above threshold</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <script src=".../logic/actions.js"></script>
+</body>
+
+</html>

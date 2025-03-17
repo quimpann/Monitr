@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <title>Monitr</title>
+
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/budgetTracker.css">
+
+    <script src="../logic/budget.js" defer></script>
+    <script src="../logic/actions.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar-container" id="sidebar-container">
+            <!-- Sidebar Content -->
+        </div>
+        <div class="content-Responsive">
+            <!-- Main Content -->
+            <div class="content-container">
+
+                <!-- Pie Chart Section -->
+                <div class="chart-container">
+                    <h3>Budget Overview</h3>
+                    <div class="inner-chart-container">
+
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Budget Tracker -->
+                <div class="budget-tracker">
+                    <!-- Header -->
+                    <div class="header-container">
+                        <h1 class="tracker-title">Budget</h1>
+                        <button class="add-budget-btn" onclick="openModalb()">Add Budget</button>
+                    </div>
+
+                    <!-- Budget Tracker Body -->
+                    <div class="budget-content">
+                        <!-- Search Bar -->
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Search" id="searchBudget">
+                            <button class="search-btn" onclick="filterBudgets()">🔍</button>
+                        </div>
+
+                        <!-- Budget Table -->
+                        <div class="budget-list">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Amount</th>
+                                        <th>Limit</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic Budget Items -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Budget Modal -->
+                <div id="budgetModal" class="modal">
+                    <div class="modal-content">
+                        <h3 class="modal-title">Add Budget</h3>
+                        <!-- Budget Form -->
+                        <form id="budgetForm">
+                            <form id="budgetForm">
+                                <input type="hidden" id="budgetId" name="budgetId">
+
+                                <input type="text" class="modal-input" name="budgetName" placeholder="Item Name"
+                                    id="budgetItemName">
+                                <input type="text" class="modal-input" name="budgetAmount" placeholder="Amount"
+                                    id="budgetAmount">
+                                <input type="text" class="modal-input" name="budgetLimit" placeholder="Limit"
+                                    id="budgetLimit">
+                                <input type="date" class="modal-input" name="budgetDate" id="budgetDate">
+                                <div class="modal-actions">
+                                    <button type="button" class="modal-btn cancel-btn"
+                                        onclick="closeModalb()">Back</button>
+                                    <button type="button" class="modal-btn save-btn" onclick="saveForm()">Save</button>
+                                </div>
+                            </form>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../logic/budget.js" defer></script>
+    <script src="../logic/actions.js" defer></script>
+</body>
+
+
+
+</html>

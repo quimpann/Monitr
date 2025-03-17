@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Monitr</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <link rel="preload" href="../assets/css/global.css" as="style">
+    <link rel="preload" href="../assets/css/loginForm.css" as="style">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/loginForm.css">
+</head>
+
+<body>
+    
+
+    <div class="formContainer">
+        <div class="formPage">
+            <section class="formTop">
+                <div class="formTopContainer">
+                    <div class="Backbtn_Logo">
+                        <button class="Button_dfStyle" id="backBtn"><span>&lt; </span> Back</button>
+                        <img src="../assets/images/logo.webp" class="formImage" alt="logo">
+                    </div>
+                    <section class="formTopEnd">
+                        <p> Haven't made an account yet? </p>
+                        <button class="Button_dfStyle Button_LongerWidth" id="home_Direct">Create an account</button>
+                    </section>
+                </div>
+            </section>
+
+            <section class="formBottom">
+                <div class="formBottomContainer">
+                    <div class="formBottomText">
+                        <p class="headingStyle"> Welcome back! <br> <span class="subtitle-font"> Log in to your account</span></p>
+                    </div>
+                    <div class="formBottomForm">
+                        <section class="signInContainer p-font">
+                            <form id="loginForm" action="../backend/login.php" method="POST">
+                                <div class="formUsername">
+                                    <label for="username">Username</label><br>
+                                    <input type="text" id="username" name="username" required class="formBorder">
+                                </div>
+                                <div class="formPass">
+                                    <label for="password">Password</label><br>
+                                    <input type="password" id="password" name="password" required class="formBorder">
+                                </div>
+                                <br>
+                                <button type="submit" class="submit-btn p-font">Log In</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="formAd">
+            <section class="formAdImage">
+                <div class="formAdText p-font">
+                    <p>An Expense Tracker helps you to record and keep track of your spending. It shows where your money goes, helping you budget better and save more.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+    <script src="../logic/routing/loginForm.js"></script>
+</body>
+
+</html>

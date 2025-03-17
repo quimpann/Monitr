@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <title>Monitr</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+
+    <!-- Include JavaScript files -->
+    <script src="../logic/actions.js" defer></script>
+    <!-- 
+    <script src="../logic/dashboard.js" defer></script>
+    <script src="../logic/calendar.js" defer></script>
+-->
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="settings-container">
+            <div class="sidebar-container" id="sidebar-container">
+
+            </div>
+
+            <div class="content-Responsive">
+                <div class="settings-content">
+                    <input type="radio" name="tabs" id="tab1" checked class="tab-input">
+                    <input type="radio" name="tabs" id="tab2" class="tab-input">
+                    <input type="radio" name="tabs" id="tab3" class="tab-input">
+                    <input type="radio" name="tabs" id="tab4" class="tab-input">
+                    <input type="radio" name="tabs" id="tab5" class="tab-input">
+
+                    <section class="settings-section" id="dashboard">
+                        <h2>Dashboard</h2><br>
+                        <div class="dashboard-cards" id="dashboard-cards">
+                            <div class="card total-expenses" id="total-expenses-card">
+                                <h3 id="total-expenses-title">Total Expenses</h3>
+                                <p class="amount" id="total-expenses-amount">₱0.00</p>
+                                <p class="period" id="total-expenses-period">This Month</p>
+                            </div>
+                            <div class="card budget-remaining" id="budget-remaining-card">
+                                <h3 id="budget-remaining-title"> Budget Remaining </h3>
+                                <p class="amount" id="budget-remaining-amount"> ₱0.00 </p>
+                                <p class="period" id="budget-remaining-period"> of ₱0.00 </p>
+                            </div>
+                            <div class="card total-savings" id="total-savings-card">
+                                <h3 id="total-savings-title">Total Savings</h3>
+                                <p class="amount" id="total-savings-amount">₱0.00</p>
+                                <p class="period" id="total-savings-period">This Month</p>
+                            </div>
+                        </div>
+                        <div class="month" id="calendar-month">
+                            <ul id="month-nav">
+                                <li class="prev" id="prev-month">&#10094;</li>
+                                <li class="next" id="next-month">&#10095;</li>
+                                <li id="current-month">February<br><span style="font-size:18px"
+                                        id="current-year">2025</span></li>
+                            </ul>
+                        </div>
+
+                        <ul class="weekdays" id="weekdays-list">
+                            <li>Mo</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ul>
+
+                        <ul class="days" id="days-list">
+                            <!-- Days will be dynamically populated by calendar.js -->
+                        </ul>
+
+                        <div class="recent-expenses" id="recent-expenses-section">
+                            <h3 id="recent-expenses-title">Recent Expenses</h3>
+                            <div class="expense-list" id="expense-list">
+                                <!-- Recent expenses will be dynamically populated by dashboard.js -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../logic/actions.js" defer></script>
+</body>
+
+</html>

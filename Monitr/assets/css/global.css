@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+:root {
+  --primary-color: #f9f9f9;
+  --secondary-color: #82c566;
+
+  --default-font-color: #2a2a2a;
+  --subtitle-font-color: #5e5e5e;
+  --active-font-btn: #117a4f;
+  --font-color-dark-bg: #f9f9f9;
+
+  --default-btn: #117a4f;
+  --hover-btn: #7ed957;
+  --active-btn: #f9f9f9;
+  --border-btn: #82c566;
+
+  --Primary-font: "Garett", sans-serif;
+  --Secondary-font: "Baron Neue";
+}
+
+@font-face {
+  font-family: "Garett";
+  src: url("../font/Garet-Book.woff2") format("woff2"),
+    url("../font/Garet-Book.woff") format("woff"),
+    url("../font/Garet-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Baron Neue";
+  src: url("../font/Baron Neue.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: var(--Secondary-font);
+}

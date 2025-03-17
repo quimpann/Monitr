@@ -1,0 +1,254 @@
+body {
+  background-color: #f9f9f9;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Garett", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blk-fontColor {
+  color: var(--default-font-color);
+}
+
+.wht-fontColor {
+  color: var(--primary-color);
+}
+
+.garett-font {
+  font-family: var(--Primary-font);
+}
+
+.headerContainer {
+  background: rgb(17, 122, 79);
+  background: linear-gradient(
+    0deg,
+    rgba(17, 122, 79, 1) 0%,
+    rgba(130, 197, 102, 1) 97%
+  );
+  height: 94%;
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 1em;
+  margin: 0px auto;
+  border-radius: 25px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  align-items: center;
+}
+
+.navContainer {
+  width: 60%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.navContainer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.navContainer li {
+  display: inline-block;
+}
+
+.navContainer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.navContainer button {
+  margin-left: auto;
+}
+
+.navButton {
+  background-color: var(--default-btn);
+  border: 2px solid var(--border-btn);
+  font-family: var(--Secondary-font);
+  padding: 10px 50px;
+  text-align: center;
+  margin: 10px 0px;
+  border-radius: 20px;
+  color: var(--primary-color);
+}
+
+.navButton:hover {
+  cursor: pointer;
+  background-color: var(--hover-btn);
+  border: 2px solid var(--border-btn);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.headerTextContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 1.5em;
+  flex: 2;
+}
+
+.textContainerStyle {
+  color: var(--primary-color);
+  font-family: var(--Secondary-font);
+}
+
+.headerMonitor_Text {
+  width: 100%;
+  flex: 1;
+  font-family: var(--Primary-font);
+  font-weight: bold;
+  font-size: 3.4em;
+  margin-bottom: 0;
+}
+
+.biggerFont {
+  font-size: 24px;
+}
+
+.monitrImage {
+  flex: 1;
+  background-image: url("../images/index/monitrLogo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100px;
+  width: 100%;
+}
+
+.emailField {
+  border: 5px solid var(--secondary-color);
+  background-color: var(--active-font-btn);
+  color: var(--primary-color);
+  text-align: center;
+  border-radius: 10px 0px 0px 10px;
+  padding: 6px 80px;
+  font-size: 20px;
+  margin: 0 -12px;
+}
+
+.emailField::placeholder {
+  color: #87ae91;
+}
+
+.formButton .emailField {
+  box-shadow: var(--default-font-color) 0px 25px 20px -20px;
+}
+
+.formButton {
+  margin-top: 4px;
+  border: 5px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--primary-color);
+  border-radius: 20px;
+  padding: 6px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.formButton:hover {
+  background-color: var(--hover-btn);
+  border-color: var(--hover-btn);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  cursor: pointer;
+}
+
+.underlinedButton {
+  border: unset;
+  background-color: unset;
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-family: var(--Primary-font);
+}
+
+.underlinedButton:hover {
+  cursor: pointer;
+  color: var(--hover-btn);
+  text-shadow: 0px 2px 2px rgba(59, 113, 37, 0.48);
+}
+
+.trackNow {
+  margin-bottom: 2%;
+}
+
+/* for mobile */
+@media (max-width: 768px) {
+  .headerContainer {
+    height: 98%;
+    width: 100%;
+    padding: 2rem;
+    margin: 1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .header {
+    height: 100%;
+  }
+
+  .navContainer {
+    width: 100%;
+    margin: 0;
+
+  }
+
+  .navContainer ul {
+    gap: 10px;
+  }
+
+  .navButton {
+    padding: 10px 30px;
+  }
+
+  .headerTextContainer {
+    margin-top: 0;
+    flex: 2;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerMonitor_Text {
+    font-size: 1.5em;
+  }
+
+  .monitrImage {
+    height: 80px;
+  }
+
+  .emailField {
+    padding: 6px 60px;
+    font-size: 18px;
+  }
+
+  .formButton {
+    padding: 6px 60px;
+  }
+}

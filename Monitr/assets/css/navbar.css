@@ -1,0 +1,167 @@
+.settings-sidebar {
+    width: 6vw; 
+    background: linear-gradient(
+    0deg,
+    rgba(17, 122, 79, 1) 0%,
+    rgba(130, 197, 102, 1) 97%
+  );
+    padding: 1rem;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: width 0.3s ease; 
+    overflow: hidden; 
+}
+
+
+span {
+    font-family: var(--Primary-font);
+}
+
+.settings-sidebar.expanded {
+    width: 12rem;
+}
+
+.settings-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.settings-sidebar h1 {
+    font-size: 1.5rem;
+    color: white;
+    transition: opacity 0.3s ease; 
+}
+
+.settings-sidebar.collapsed h1 {
+    opacity: 0; 
+}
+
+.settings-sidebar.collapsed span {
+    opacity: 1; 
+}
+
+.nav-item {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex; 
+    align-items: center; 
+}
+
+.nav-item .icon {
+    margin-right: 10px; 
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.settings-sidebar.collapsed .nav-item span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.settings-sidebar.expanded .nav-item span {
+    opacity: 1;
+}
+
+.settings-sidebar.collapsed .nav-item .icon {
+    display: inline-block; 
+    opacity: 1; 
+}
+
+.settings-sidebar span {
+    color: var(--Secondary-font);
+}
+
+.navbarLogo {
+    background-image: url("../images/logo-nobg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100px; 
+    min-height: 20px;
+    height: 100px;
+    display: block; 
+    margin: 0;
+}
+
+.settings-sidebar.collapsed .nav-item figure {
+    display: block;  
+}
+
+.settings-sidebar.collapsed .nav-item img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 22px;
+    min-width: 22px;
+    max-width: 20%; 
+    max-height: 20%; 
+    object-fit: contain;
+}
+
+.settings-sidebar.expanded .nav-item img {
+    max-width: 20%; 
+    min-height: 22px;
+    min-width: 22px;
+}
+
+@media (max-width: 768px) {
+    .settings-sidebar {
+        overflow: hidden;
+        width: 100vw;
+        height: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .settings-sidebar.collapsed{
+        height: max-content;
+        align-items: center;
+    }
+
+    .settings-sidebar.collapsed span{
+        opacity: 1;
+        margin: 5px 0px;
+        font-size: 0.8rem;
+    }
+
+    .settings-sidebar.collapsed .nav-item span {
+        opacity: 1;
+
+    }
+
+    .settings-nav .icon {
+        height: auto;
+        width: 5px;
+        
+    }
+
+    .settings-sidebar.expanded {
+        width: 100vw;
+        height: max-content;
+    }
+
+    .settings-nav {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        flex-wrap: wrap;
+        width: 6rem;
+    }
+
+    .navbarLogo {
+        max-width: 5rem;
+    }
+}

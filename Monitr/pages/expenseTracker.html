@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+
+    <title>Monitr</title>
+
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/expenseTracker.css">
+
+
+    <script src="../logic/actions.js" defer></script>
+    <!-- 
+    <script src="../logic/expense.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    -->
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sidebar-container" id="sidebar-container"></div>
+
+        <div class="content-Responsive">
+            <div class="content-container"> <!-- bg color is for visualization ket tanggalin na yan-->
+                <div>
+
+                    <div class="total-expense-container">
+                        <h3 class="total-title">Total Expenses: <span id="totalExpense">Php 0.00</span></h3>
+                    </div>
+                    <div class="expense-tracker">
+                        <!-- Header -->
+                        <div class="header-container">
+                            <h1 class="tracker-title">EXPENSES</h1>
+                            <button class="add-expense-btn" onclick="expenseOpenModal()">Add Expense</button>
+                        </div>
+
+                        <!-- Expense Tracker Body -->
+                        <div class="expense-content">
+                            <!-- Search Bar -->
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="Search">
+                                <button class="search-btn">🔍</button>
+                            </div>
+
+                            <!-- Expense Table -->
+                            <div class="expense-list">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Amount</th>
+                                            <th>Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Expense Modal -->
+                    <div id="expenseModal" class="modal">
+                        <div class="modal-content">
+                            <legend class="modal-title">Add Expense</legend>
+                            <input type="text" class="modal-input" placeholder="Item Name" id="expenseItemName">
+                            <input type="text" class="modal-input" placeholder="Category" id="expenseCategory">
+                            <input type="text" class="modal-input" placeholder="Amount" id="expenseAmount">
+                            <input type="date" class="modal-input" id="expenseStartDate">
+                            <input type="date" class="modal-input" id="expenseDeadline">
+                            <div class="modal-actions">
+                                <button class="modal-btn cancel-btn" onclick="expenseCloseModal()">Back</button>
+                                <button class="modal-btn save-btn" onclick="saveExpense()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../logic/expenseTracker.js"></script>
+</body>
+
+
+</html>

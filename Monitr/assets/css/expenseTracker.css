@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1400px;
+  display: flex;
+}
+
+.sidebar-container {
+  flex: 1;
+  max-width: 20%;
+}
+
+.content-Responsive {
+  width: 80%;
+}
+
+.content-container {
+  flex: 6;
+  max-width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--Primary-font) !important;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Garett", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+}
+
+/* Expense Tracker Card */
+.expense-tracker {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #82c566;
+  width: 100%;
+  max-width: 1200px; /* Limits the width on large screens */
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+/* Title and Add Expense Button Alignment */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.total-expenses-container {
+  font-family: "Garret";
+  font-size: 22px;
+  color: #2a2a2a;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tracker-title {
+  font-family: "Garret";
+  font-size: 22px;
+  color: #2a2a2a;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Add Expense Button */
+.add-expense-btn {
+  background: linear-gradient(
+    0deg,
+    rgba(17, 122, 79, 1) 0%,
+    rgba(130, 197, 102, 1) 97%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-expense-btn:hover {
+  background: #7ed957;
+}
+
+/* Search & Expense Table Layout */
+.expense-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Search Box */
+.search-container {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #82c566;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures proper border radius */
+  width: fit-content;
+  padding: 10px;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #6aa94f;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #82c566;
+  text-align: center;
+}
+
+/* Total Expense */
+.total-title {
+  font-family: "Garret";
+  font-size: 40px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Expense List */
+.expense-list {
+  flex: 3;
+  min-width: 600px;
+  border: 2px solid #82c566;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #82c566;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #82c566;
+  cursor: pointer;
+  background: transparent;
+}
+.delete-btn {
+  background-color: #2a2a2a;
+  color: white;
+}
+.edit-btn:hover {
+  background-color: #82c566;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  border: 2px solid #82c566;
+}
+
+.modal-title {
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 1px solid #82c566;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #82c566;
+  cursor: pointer;
+  background: transparent;
+}
+
+.cancel-btn:hover {
+  background: red;
+  color: white;
+}
+
+.save-btn {
+  background-color: #117a4f;
+  color: white;
+}
+.save-btn:hover {
+  background: #82c566;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .expense-content {
+    flex-direction: column;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .expense-list {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content-Responsive {
+    width: 100%;
+  }
+
+  .content-container {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    flex-direction: row;
+  }
+}

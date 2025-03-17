@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(
+    0deg,
+    rgba(17, 122, 79, 1) 0%,
+    rgba(130, 197, 102, 1) 97%
+  );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Primary-font);
+}
+
+p {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    text-align: center;
+}

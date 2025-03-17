@@ -1,0 +1,266 @@
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(17, 122, 79, 1) 0%,
+    rgba(130, 197, 102, 1) 97%
+  );
+  height: 100vh;
+  width: 100vw;
+  font-family: "Garett", sans-serif;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+button {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.bold-font {
+  font-weight: bold;
+}
+
+.subtitle-font {
+  font-size: 0.7em;
+  font-family: var(--Primary-font);
+  color: var(--subtitle-font-color);
+}
+
+.p-font {
+  font-family: var(--Secondary-font);
+}
+
+.headingStyle {
+  font-weight: bold;
+  font-family: var(--Secondary-font);
+  font-size: 1.8em;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 80vh;
+  padding: 2%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.formPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2%;
+  gap: 2px;
+}
+
+.formImage {
+  padding: 2%;
+  background-image: url("../images/logo.webp");
+  height: 5em;
+  width: auto;
+}
+
+.formTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  height: 28%;
+  padding: 2%;
+}
+
+.formTopContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Backbtn_Logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.Backbtn_Logo img {
+  height: 50px; 
+}
+
+.Backbtn_Logo button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.Button_dfStyle {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: linear-gradient(0deg, rgba(17, 122, 79, 1) 0%, rgba(130, 197, 102, 1) 97%);
+  background: var(--default-btn);
+  cursor: pointer;
+}
+
+.Button_LongerWidth {
+  background: #318f4a;
+  width: 60%;
+}
+
+.Button_dfStyle:hover, .submit-btn:hover {
+  background: var(--hover-btn);
+}
+
+.formTopEnd {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  flex: 1;
+}
+
+
+.formBottom {
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border: 8px solid var(--secondary-color);
+  height: 100%;
+  width: 95%;
+  border-radius: 6%;
+  padding: 2%;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.formBottomContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+
+.signInContainer {
+  margin-top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+
+}
+
+.signInContainer label {
+  font-size: 1.2em;
+  display: block; 
+}
+
+.signInContainer input {
+  width: 100%;
+  max-width: 40em;
+  padding: 4px 10px;
+}
+
+
+
+.formBorder {
+  border: 3px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.formUsername,
+.formPass {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.formBottomText {
+  width: 96%;
+  flex: 2;
+  margin: 10px 9px;
+  padding: 0px 10px;
+
+}
+
+.formBottomForm {
+  width: 96%;
+  flex: 5;
+  margin: 0px 9px;
+  padding: 0px 10px;
+
+}
+
+.logContainer {
+  margin-top: 0;
+  width: 100%;
+}
+
+
+.submit-btn {
+  display: flex;
+  margin: auto;
+  background-color: var(--default-btn);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  width: 96%;
+  padding: 3% 0%;
+  justify-content: center;
+  color: var(--active-btn);
+  cursor: pointer;
+}
+
+#loginForm {
+  width: 96%;
+}
+
+.formAd {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.formAdImage {
+  border: 8px solid var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-image: url("../images/LoginForm/formAdImage.png");
+  height: 100%;
+  width: 100%;
+  border-radius: 6%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.formAdImage:hover {
+  filter: brightness(50%);
+}
+
+.formAdText {
+  color: var(--primary-color);
+  padding: 0% 4%;
+  display: flex;
+  align-items: flex-end;
+  height: 94%;
+  width: 70%;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.layoutRow {
+  display: flex;
+}
+
+@media (max-width: 768px) or (max-width: 1058px) {
+  .formAd {
+    display: none;
+  }
+}
+
