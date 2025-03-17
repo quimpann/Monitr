@@ -1,0 +1,23 @@
+# Ignore environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.testing
+
+# Ignore database and XAMPP logs
+mysql/data/*
+!mysql/data/mysql  # Keep system files
+xampp/mysql/logs/*
+
+# Ignore compiled and vendor files
+/node_modules
+/vendor
+composer.lock
+package-lock.json
+
+# Ignore editor and OS-specific files
+*.log
+*.cache
+.DS_Store
+Thumbs.db
